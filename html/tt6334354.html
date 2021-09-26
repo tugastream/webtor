@@ -1,0 +1,52 @@
+    <div id="player" class="webtor" />
+    <script>
+        window.webtor = window.webtor || [];
+        window.webtor.push({
+            id: 'player',
+            magnet: 'magnet:?xt=urn:btih:7519e65a2a2359e32a17ce7ab04c8dc5fdbae9f2&dn=The.Suicide.Squad.2021.1080p.WEBRip.x264-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2880&tr=udp%3A%2F%2F9.rarbg.to%3A2980&tr=udp%3A%2F%2Ftracker.thinelephant.org%3A12790&tr=udp%3A%2F%2Ftracker.fatkhoala.org%3A13730',
+            width: '100%',
+            height: '100%',
+            features: {
+                continue:       false,
+				download:       false,
+				embed:          false,
+                // title:       false,
+                p2pProgress:    true,
+                // subtitles:   false,
+                settings:       false,
+                // fullscreen:  false,
+                // playpause:   false,
+                // currentTime: false,
+                // timeline:    false,
+                // duration:    false,
+                // volume:      false,
+                // chromecast:  false,
+            },
+			on: function(e) {
+                if (e.name == window.webtor.TORRENT_FETCHED) {
+                    console.log('Torrent fetched!', e.data);
+                }
+                if (e.name == window.webtor.TORRENT_ERROR) {
+                    console.log('Torrent error!');
+                }
+            },
+			imdbId: 'tt6334354',
+			title: '[WEBRip 1080p] The Suicide Squad (2021)',
+            poster: 'https://image.tmdb.org/t/p/original/jKgulFr4CErJH94aMazXJTYxk7o.jpg',
+            lang: 'en',
+            i18n: {
+                en: {
+                    common: {
+                        "prepare to play": "Preparing Video Stream... Please Wait...",
+                    },
+                    stat: {
+                        "seeding": "Seeding",
+                        "waiting": "Client initialization",
+                        "waiting for peers": "Waiting for peers",
+                        "from": "from",
+                    },
+                },
+            },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@webtor/player-sdk-js@0.2.12/dist/index.min.js" charset="utf-8" async></script>
